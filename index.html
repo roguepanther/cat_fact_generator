@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" integrity="sha512-5fsy+3xG8N/1PV5MIJz9ZsWpkltijBI48gBzQ/Z2eVATePGHOkMIn+xTDHIfTZFVb9GMpflF2wOWItqxAP2oLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .results__container {
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+        }
+        .success-alert {
+            padding: 20px;
+            border: 1px solid green;
+            background: green;
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+        }
+    </style>
+    <title>Random Cat Fact</title>
+</head>
+<body>
+    <div class="container">
+        <h2> Random Cat Fact Generator </h2>
+        <button class="u-full-width" id="get-fact">Get Random Fact </button>
+    </div>
+    <div>
+        <div id="cat-facts" class="results__container"></div>
+    </div>
+
+<!--    <footer>-->
+<!--        <p> Powered by Cat-Facts & @alexwohlbruck</p>-->
+<!--    </footer>-->
+    <script src="app.js"></script>
+</body>
+</html>
