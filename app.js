@@ -8,12 +8,13 @@ function loadCatFact(e) {
 
     const xhr = new XMLHttpRequest();
 
-    xhr.open('GET', 'https://cat-fact.herokuapp.com/facts', true);
+    xhr.open('GET', 'https://catfact.ninja/fact', true);
 
     xhr.onload = function() {
         if(this.status === 200) {
             const response = JSON.parse(this.responseText);
             console.log(response);
+            console.log('RESPONSE STATUS: ', response.status);
 
             let output = '';
 
@@ -29,15 +30,25 @@ function loadCatFact(e) {
             //     `;
             // }
 
-            for (let fact in response){
-                output += `
-                    <h5>${response[fact].text}</h5>
-                `;
-            }
+            // for (let fact in response){
+            //     output += `
+            //         <h5>${response.text}</h5>
+            //     `;
+            // }
+
+            // Single fact function
+            output += `
+               <h5>${response.fact}</h5>  
+            `;
+
 
             document.querySelector('#cat-facts').innerHTML = output;
 
-            showTimedAlert();
+            if(response.status !== 'undefined') {
+                showTimedAlert();
+            } else {
+                console.log('something went wrong. Please try again.');
+            }
 
 
         }
